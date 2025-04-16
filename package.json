@@ -3,7 +3,7 @@
   "displayName": "Dynamic Highlighter",
   "publisher": "VictorFaundez",
   "description": "Highlight text using configurable regular expressions and colors",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.70.0"
