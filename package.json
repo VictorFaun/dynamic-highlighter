@@ -3,7 +3,8 @@
   "displayName": "Dynamic Highlighter",
   "publisher": "VictorFaundez",
   "description": "Highlight text using configurable regular expressions and colors",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -74,7 +75,7 @@
             {
               "pattern": "console\\.error\\(.*\\)",
               "foreground": "#ffffff",
-              "background": "#ff8c00",
+              "background": "#ff0000",
               "extension": [
                 "js",
                 "jsx",
@@ -85,8 +86,8 @@
             },
             {
               "pattern": "console\\.warn\\(.*\\)",
-              "foreground": "#000000",
-              "background": "#ffff00",
+              "foreground": "#ffffff",
+              "background": "#ff0000",
               "extension": [
                 "js",
                 "jsx",
@@ -98,7 +99,7 @@
             {
               "pattern": "console\\.trace\\(.*\\)",
               "foreground": "#ffffff",
-              "background": "#800080",
+              "background": "#ff0000",
               "extension": [
                 "js",
                 "jsx",
@@ -109,8 +110,8 @@
             },
             {
               "pattern": "debugger",
-              "foreground": "#000000",
-              "background": "#00ffff",
+              "foreground": "#ffffff",
+              "background": "#ff0000",
               "extension": [
                 "js",
                 "jsx",
@@ -122,7 +123,7 @@
             {
               "pattern": "var_dump\\(.*\\);?",
               "foreground": "#ffffff",
-              "background": "#a52a2a",
+              "background": "#ff0000",
               "extension": [
                 "php"
               ]
@@ -130,7 +131,7 @@
             {
               "pattern": "dd\\(.*\\);?",
               "foreground": "#ffffff",
-              "background": "#a52a2a",
+              "background": "#ff0000",
               "extension": [
                 "php"
               ]
@@ -138,7 +139,7 @@
             {
               "pattern": "die\\(.*\\);?",
               "foreground": "#ffffff",
-              "background": "#000000",
+              "background": "#ff0000",
               "extension": [
                 "php"
               ]
@@ -146,7 +147,7 @@
             {
               "pattern": "exit\\(.*\\);?",
               "foreground": "#ffffff",
-              "background": "#000000",
+              "background": "#ff0000",
               "extension": [
                 "php"
               ]
@@ -154,7 +155,7 @@
             {
               "pattern": "print_r\\(.*\\);?",
               "foreground": "#ffffff",
-              "background": "#4682b4",
+              "background": "#ff0000",
               "extension": [
                 "php"
               ]
@@ -162,7 +163,7 @@
             {
               "pattern": "dump\\(.*\\)",
               "foreground": "#ffffff",
-              "background": "#dda0dd",
+              "background": "#ff0000",
               "extension": [
                 "php"
               ]
@@ -170,7 +171,7 @@
             {
               "pattern": "console\\.assert\\(.*\\)",
               "foreground": "#ffffff",
-              "background": "#dc143c",
+              "background": "#ff0000",
               "extension": [
                 "js",
                 "jsx",
