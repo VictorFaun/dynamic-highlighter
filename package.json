@@ -12,8 +12,7 @@
     "url": "https://github.com/VictorFaun/dynamic-highlighter.git"
   },
   "activationEvents": [
-    "onStartupFinished",
-    "onLanguage:*"
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {
