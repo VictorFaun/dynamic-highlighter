@@ -1,0 +1,199 @@
+{
+  "name": "dynamic-highlighter",
+  "displayName": "Dynamic Highlighter",
+  "publisher": "VictorFaundez",
+  "description": "Highlight text using configurable regular expressions and colors",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "activationEvents": [
+    "onStartupFinished",
+    "onLanguage:*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dynamic-highlighter.reloadConfig",
+        "title": "Reload Highlight Config"
+      }
+    ],
+    "configuration": {
+      "title": "Dynamic Highlighter",
+      "properties": {
+        "dynamicHighlighter.rules": {
+          "type": "array",
+          "description": "Array of highlight rules.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "description": "Regular expression pattern to match."
+              },
+              "foreground": {
+                "type": "string",
+                "description": "Color of the matched text (e.g., #ffffff, red)."
+              },
+              "background": {
+                "type": "string",
+                "description": "Background color of the matched text (e.g., #0000ff, yellow)."
+              },
+              "extension": {
+                "type": "array",
+                "description": "Opcional: Array de extensiones de archivo en las que se aplicará esta regla (ej: ['js', 'jsx']). Si está vacío o no se define, la regla se aplica a todos los archivos.",
+                "items": {
+                  "type": "string",
+                  "description": "Extensión de archivo (ej: js)"
+                }
+              }
+            },
+            "required": [
+              "pattern",
+              "foreground",
+              "background"
+            ]
+          },
+          "default": [
+            {
+              "pattern": "console\\.log\\(.*\\)",
+              "foreground": "#ffffff",
+              "background": "#ff0000",
+              "extension": [
+                "js",
+                "jsx",
+                "ts",
+                "tsx",
+                "php"
+              ]
+            },
+            {
+              "pattern": "console\\.error\\(.*\\)",
+              "foreground": "#ffffff",
+              "background": "#ff8c00",
+              "extension": [
+                "js",
+                "jsx",
+                "ts",
+                "tsx",
+                "php"
+              ]
+            },
+            {
+              "pattern": "console\\.warn\\(.*\\)",
+              "foreground": "#000000",
+              "background": "#ffff00",
+              "extension": [
+                "js",
+                "jsx",
+                "ts",
+                "tsx",
+                "php"
+              ]
+            },
+            {
+              "pattern": "console\\.trace\\(.*\\)",
+              "foreground": "#ffffff",
+              "background": "#800080",
+              "extension": [
+                "js",
+                "jsx",
+                "ts",
+                "tsx",
+                "php"
+              ]
+            },
+            {
+              "pattern": "debugger",
+              "foreground": "#000000",
+              "background": "#00ffff",
+              "extension": [
+                "js",
+                "jsx",
+                "ts",
+                "tsx",
+                "php"
+              ]
+            },
+            {
+              "pattern": "var_dump\\(.*\\);?",
+              "foreground": "#ffffff",
+              "background": "#a52a2a",
+              "extension": [
+                "php"
+              ]
+            },
+            {
+              "pattern": "dd\\(.*\\);?",
+              "foreground": "#ffffff",
+              "background": "#a52a2a",
+              "extension": [
+                "php"
+              ]
+            },
+            {
+              "pattern": "die\\(.*\\);?",
+              "foreground": "#ffffff",
+              "background": "#000000",
+              "extension": [
+                "php"
+              ]
+            },
+            {
+              "pattern": "exit\\(.*\\);?",
+              "foreground": "#ffffff",
+              "background": "#000000",
+              "extension": [
+                "php"
+              ]
+            },
+            {
+              "pattern": "print_r\\(.*\\);?",
+              "foreground": "#ffffff",
+              "background": "#4682b4",
+              "extension": [
+                "php"
+              ]
+            },
+            {
+              "pattern": "dump\\(.*\\)",
+              "foreground": "#ffffff",
+              "background": "#dda0dd",
+              "extension": [
+                "php"
+              ]
+            },
+            {
+              "pattern": "console\\.assert\\(.*\\)",
+              "foreground": "#ffffff",
+              "background": "#dc143c",
+              "extension": [
+                "js",
+                "jsx",
+                "ts",
+                "tsx",
+                "php"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "@types/node": "^16.x",
+    "typescript": "^4.7.4",
+    "tslint": "^6.1.3"
+  },
+  "license":"LICENSE.md"
+}

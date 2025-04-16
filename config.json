@@ -1,0 +1,13 @@
+[
+    {
+      "pattern": "console\\.log\\(.*\\)",
+      "foreground": "#ffffff",
+      "background": "#ff0000"
+    },
+    {
+      "pattern": "TODO",
+      "foreground": "#000000",
+      "background": "#ffff00"
+    }
+  ]
+  
